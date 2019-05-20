@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/05/10 16:35:52.000.302,=C:\donnees\ESO\RADCPP\voisinages\Unit1.cpp</Transaction>
+    <Transaction>2019/05/10 16:37:43.000.932,C:\donnees\ESO\RADCPP\voisinages\Unit1.cpp=C:\donnees\ESO\RADCPP\voisinages\calcul.cpp</Transaction>
+    <Transaction>2019/05/10 16:37:43.000.932,C:\donnees\ESO\RADCPP\voisinages\Unit1.h=C:\donnees\ESO\RADCPP\voisinages\calcul.h</Transaction>
+    <Transaction>2019/05/10 16:37:43.000.932,C:\donnees\ESO\RADCPP\voisinages\Unit1.dfm=C:\donnees\ESO\RADCPP\voisinages\calcul.dfm</Transaction>
+    <Transaction>2019/05/20 17:40:55.476,C:\donnees\ESO\RADCPP\voisinages\voisinages.cbproj=C:\donnees\ESO\RADCPP\voisinages\sdiapp.cbproj</Transaction>
+  </Transactions>
+</BorlandProject>
