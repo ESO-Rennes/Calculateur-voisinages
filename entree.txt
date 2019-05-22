@@ -1,0 +1,10 @@
+ORIGINE	DESTINATION	Distance
+A	B	5
+A	C	5
+B	D	6
+C	F	9
+C	G	6
+D	E	7
+D	F	6
+E	F	4
+F	G	5
