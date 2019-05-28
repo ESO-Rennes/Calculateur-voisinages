@@ -9,6 +9,7 @@ Le tableau de contingence indique la liste des couples de points qui sont voisin
 "Calculateur de voisinage" est un logiciel gratuit fonctionnant sous Windows (Windows 7, 8 et 10). Vous pouvez le télécharger et l'utiliser librement. Nous vous demandons simplement de citer « Calculateur de voisinage - Laboratoire ESO-Rennes - UMR 6590 CNRS - Université Rennes 2 » si vous publiez des travaux dans lesquels vous l'utilisez. 
 
 Le programme a été développé avec l'EDI Embarcadero C++ builder Community Edition, téléchargeable sur la page :
-https://www.embarcadero.com/fr/products/cbuilder/starter
+https://www.embarcadero.com/fr/products/cbuilder/starter<br>
 L'installateur (voisinages_setup.exe) a été créé au moyen du logiciel libre Inno Setup http://www.jrsoftware.org/isinfo.php
+L'algorithme implémenté est créé par Edsger Dijkstra https://fr.wikipedia.org/wiki/Algorithme_de_Dijkstra 
 
