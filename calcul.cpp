@@ -398,7 +398,7 @@ void __fastcall TFormVoisinages::ButtonCalculerClick(TObject *Sender)
 					nbcalc = nbpoints * (nbpoints-1);
 					Canvas->TextOut(80,580,"Traitement en cours, veuillez patienter...");
 					//(50,580,UnicodeString("              Traitement en cours           "));
-					ProgressBar1->Max = nbpoints * nbpoints;
+					ProgressBar1->Max = nbcalc;
 					ProgressBar1->Position = 0;
 					fprintf(fds,"%s%c%s%cordre%cvaleur\n",colonnes[cb_depart->ItemIndex],seps,colonnes[cb_arrivee->ItemIndex],seps,seps);
 					ordaminimiser = (RadioGroupMinimiser->ItemIndex == 1 ? true : false);
@@ -439,6 +439,7 @@ void __fastcall TFormVoisinages::ButtonCalculerClick(TObject *Sender)
 						}
 					}
 					fclose(fds);
+					ProgressBar1->Position = nbcalc;
 					Application->MessageBox(_TEXT("Traitement terminé"),_TEXT("Fin"),MB_OK);
                 }
             }
