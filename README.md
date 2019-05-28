@@ -11,5 +11,5 @@ Le tableau de contingence indique la liste des couples de points qui sont voisin
 Le programme a été développé avec l'EDI Embarcadero C++ builder Community Edition, téléchargeable sur la page :
 https://www.embarcadero.com/fr/products/cbuilder/starter<br>
 L'installateur (voisinages_setup.exe) a été créé au moyen du logiciel libre Inno Setup http://www.jrsoftware.org/isinfo.php<br>
-L'algorithme implémenté est créé par Edsger Dijkstra https://fr.wikipedia.org/wiki/Algorithme_de_Dijkstra 
+L'algorithme implémenté a été créé par Edsger Dijkstra https://fr.wikipedia.org/wiki/Algorithme_de_Dijkstra 
 
