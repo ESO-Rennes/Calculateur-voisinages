@@ -14,7 +14,7 @@ __fastcall TFormVoisinages::TFormVoisinages(TComponent* Owner)
 {
 }
 
-	const NBMAX = 1000;
+	const NBMAX = 3000;
 	int nbpoints;
 	typedef char nompoint[15];
 	typedef struct {
@@ -261,7 +261,7 @@ void __fastcall TFormVoisinages::ButtonCalculerClick(TObject *Sender)
         exts = EditNomFicSortie->Text.SubString(pos+1,3);
 		if ((fde = fopen(AnsiString(EditNomFicEntree->Text).c_str(),"r")) == NULL)
 			Application->MessageBox(_TEXT("Erreur d'ouverture du fichier d'entrée"), _TEXT("Erreur"), MB_OK);
-        else
+		else
 		{
             if ((fds = fopen(AnsiString(EditNomFicSortie->Text).c_str(),"w")) == NULL)
                 Application->MessageBox(_TEXT("Erreur d'ouverture du fichier de sortie"),_TEXT("Erreur"),MB_OK);
@@ -306,6 +306,8 @@ void __fastcall TFormVoisinages::ButtonCalculerClick(TObject *Sender)
                 fclose(fde);
 				fde = fopen(AnsiString(EditNomFicEntree->Text).c_str(),"r");
 
+				if (nbpoints > NBMAX)
+					 Application->MessageBox(_TEXT("Nombre de points supérieur au maximum"), _TEXT("Erreur"), MB_OK);
 				for (i=0; i<nbpoints; i++)
                 {
                     for (j=0; j<nbpoints; j++)
@@ -396,18 +398,21 @@ void __fastcall TFormVoisinages::ButtonCalculerClick(TObject *Sender)
 					nbcalc = nbpoints * (nbpoints-1);
 					Canvas->TextOut(80,580,"Traitement en cours, veuillez patienter...");
 					//(50,580,UnicodeString("              Traitement en cours           "));
-					ProgressBar1->Max = nbcalc;
+					ProgressBar1->Max = nbpoints * nbpoints;
 					ProgressBar1->Position = 0;
 					fprintf(fds,"%s%c%s%cordre%cvaleur\n",colonnes[cb_depart->ItemIndex],seps,colonnes[cb_arrivee->ItemIndex],seps,seps);
 					ordaminimiser = (RadioGroupMinimiser->ItemIndex == 1 ? true : false);
 					for (i=0; i<nbpoints; i++)
 					{
+                        Canvas->TextOutW(300,580,i);
 						if (RadioGroupOriente->ItemIndex == 1) // non oriente
 							 deb = i+1;
 						else
 							deb = 0;
 						for (j=deb; j<nbpoints; j++)
 						{
+						Canvas->TextOutW(300,580,i);
+                        Canvas->TextOutW(330,580,j);
 							if (i != j)
 							{
 								lg = CalculerCheminPlusCourt(i,j,ordmax,valmax,ordaminimiser,&distance,&ordre);
@@ -427,10 +432,10 @@ void __fastcall TFormVoisinages::ButtonCalculerClick(TObject *Sender)
 									if (RadioGroupOriente->ItemIndex == 1)
 										fprintf(fds,"%s%c%s%c%d%c%s\n",points[j],seps,points[i],seps,ordre,seps,chaine);
 								}
-								ProgressBar1->Position++;
-								if (RadioGroupOriente->ItemIndex == 1)
-									ProgressBar1->Position++;
 							}
+							ProgressBar1->Position++;
+							if (RadioGroupOriente->ItemIndex == 1)
+								ProgressBar1->Position++;
 						}
 					}
 					fclose(fds);
