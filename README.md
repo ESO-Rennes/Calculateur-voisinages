@@ -11,4 +11,4 @@ https://www.embarcadero.com/fr/products/cbuilder/starter<br>
 L'installateur (voisinages_setup.exe) a été créé au moyen du logiciel libre Inno Setup http://www.jrsoftware.org/isinfo.php<br>
 L'algorithme implémenté a été créé par Edsger Dijkstra https://fr.wikipedia.org/wiki/Algorithme_de_Dijkstra 
 
-Un tableau d'exemple contenant des voisins d'ordre 1 est disponible ici : <a class="js-navigation-open" title="tableau_initial_voisins_ordre_1.txt" id="7face70f7c0002f4399c5d94f0779166-f760a52471011cc8cdcaf4aa1f22b01400b1a331" href="/ESO-Rennes/Calculateur-voisinages/blob/master/tableau_initial_voisins_ordre_1.txt">tableau_initial_voisins_ordre_1.txt</a>
+Un tableau d'exemple contenant des voisins d'ordre 1 est disponible ici : <a>href="/ESO-Rennes/Calculateur-voisinages/blob/master/tableau_initial_voisins_ordre_1.txt">tableau_initial_voisins_ordre_1.txt</a>
